@@ -66,8 +66,8 @@
   }
   $number_px: Number($string_px); // converting the string-number from string to number
   @debug type-of($number_px); // making sure it's a number in order to calculate later
-  $number_px: calc($number_px / 16) + rem;
-  @return $number_px;
+  $number_rem: calc($number_px / 16) + rem;
+  @return $number_rem;
 }
 
 // example
