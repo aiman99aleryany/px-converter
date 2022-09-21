@@ -64,6 +64,11 @@
       $end-at: $index - 1,
     ); // getting only the string-number
   }
+
+  @else {
+    @warn "#{$index} is not a px";
+    @return false;
+  }
   $number_px: Number($string_px); // converting the string-number from string to number
   @debug type-of($number_px); // making sure it's a number in order to calculate later
   $number_rem: calc($number_px / 16) + rem;
